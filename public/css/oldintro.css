@@ -1,0 +1,67 @@
+TEI {font-family: Verdana, sans-serif; font-size:16pt}
+teiHeader{display:block ; background-color: #DBDBDB; color: black}
+bibl{display:block}
+bibl title {display: block; 
+font-style: italic}
+idno{display:block}
+idno[type="TS"]:before{content:'TS: '; font-weight:bold}
+idno[type="ESTC"]:before{content:'ESTC: '; font-weight:bold} 
+idno[type="shelf"]:before{content:'Shelfmark: '; font-weight:bold}
+repository{display:block}
+repository:before{content:'Repository: '; font-weight:bold}
+publisher{display:block}
+publisher:before{content:'Publisher: '; font-weight:bold}
+printer{display:block}
+printer:before{content:'Printer: '; font-weight:bold}
+pubPlace{display:block}
+pubPlace:before{content:'Place of Publication: '; font-weight:bold}
+bibl date{display:block}
+bibl date:before{content:'Date of Publication: '; font-weight:bold}
+
+text{display:block; padding: 2em 4em 2em 4em; }
+h{font-size:larger; display:block; padding-bottom:0.5em}
+text t{font-size:large; display:block}
+titlePage t {display:block}
+sub, label[level="sub"]{display:block; font-weight:bold; font-size: 12pt; padding-top: 0.5em}
+p{display: block; padding-top:1em; line-height: 20pt; font-size: larger; line-height: 1.4em}
+c{display:block; text-align:right; color:blue;}
+i{display: inline; font-style:italic}
+sc{display:inline; font-variant:small-caps}
+s{display:block; text-align:right; color:gray}
+pb{display:block; border-top: gray solid 1pt; padding-top: 0.5em; padding-bottom: 0.5em}
+pn{display:block; text-align:right; color:#CC6666}
+dc{font-size: 20pt}
+f:before{content:attr(type) "; " attr(desc); display:block; font-weight:bold; color:blue; }
+f title{display:inline; padding-left: 3em; color:green}
+trailer {display:block; text-align:center;}
+signature{display:block; text-align:right;}
+f title:before{content:"Title: "; color:green}
+titlePage{display:block; border: double ; text-align: center; margin-bottom:2em;}
+lb{display:block; }
+r {display:block; border-bottom: solid black thin; margin-left:1em; margin-right:1em;}
+
+font[dim="small"] {
+  display: inline;font-size:8pt;
+}
+font[dim="big"]{display: inline;
+  font-size:18pt}
+font[type="black"]{display: inline;
+  font-family: 'Rockwell Extra Bold'}
+col[n="1"]{display:block; float:left; border-right: double;}
+col[n="2"]{display:block; }
+cols{display:block; width: 60%; padding-left:25%}
+p h {color:green; font-weight:bold;}
+hh{background-color:#FF9933; color:black;}
+
+fc{text-transform:uppercase;}
+ft{display:block; text-align:right; color:#FF9966}
+
+seriesStmt{display:block}
+seriesStmt idno:before{content: "Archive Number: "; font-weight:bold }
+seriesStmt idno{font-weight:bold; color:red; background-color:gray; }
+change{display:list-item; list-style:decimal outside;  list-style-type:lower-roman;}
+fn{font-size:medium;}
+sn{font-size:medium; color: gray;}
+list{display:block; padding-top:1em; line-height: 20pt; font-size: larger; line-height: 1.4em}
+argument{display:block; padding-top:1em; line-height: 20pt; font-size: large; line-height: 1.4em}
+

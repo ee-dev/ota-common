@@ -1,0 +1,18 @@
+TEI {font-family: Verdana, sans-serif; font-size:16pt}
+teiHeader::before {content: url('jsa.png')}
+titleStmt::before {content: url('ota.png')}
+teiHeader{display:block ; background-color: #F0FFFF; color: black}
+titleStmt{display:block}
+titleStmt title{display: inline-block; font-weight:bold}
+titleStmt author{display: block; content:' by '; font-weight:bold}
+publicationStmt{display: none}
+sourceDesc{display: none}
+revisionDesc{display: none}
+
+text{display:block; padding: 2em 4em 2em 4em; }
+head{font-size:larger; display:block; padding-bottom:0.5em}
+text t{font-size:large; display:block}
+p{display: block; padding-top:1em; line-height: 20pt; line-height: 1.4em} 
+hi[rend="italic"]{display: inline; font-style:italic}
+change{display:list-item; list-style:decimal outside;  list-style-type:lower-roman;}
+

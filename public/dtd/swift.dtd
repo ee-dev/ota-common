@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Parametric entities -->
+
+<!ENTITY % rend 'i | sc | sup | fc ' >
+<!ENTITY % page 'pb | pn' >
+<!ENTITY % pBottom 's | c | pf'>
+<!ENTITY % notes 'fn | sn' >
+<!ENTITY % figures 'f | ornament' >
+<!ENTITY % titles 'h | t | sub | argument' >
+
+<!-- root -->
+<!ELEMENT TEI.2 (teiHeader, text)>
+<!ATTLIST TEI.2
+    id ID #IMPLIED>
+<!-- metadata -->
+<!ELEMENT teiHeader (fileDesc, profileDesc?, revisionDesc?) >
+<!ELEMENT fileDesc (titleStmt, publicationStmt, seriesStmt?, sourceDesc) >
+<!ELEMENT seriesStmt (title, idno)>
+<!ELEMENT idno (#PCDATA)*>
+<!ATTLIST idno 
+    type (TS | ESTC | shelf) #IMPLIED>
+<!ELEMENT titleStmt (title+) >
+<!ELEMENT title (#PCDATA |%rend;)*>
+<!ATTLIST title type (source | short | norm) #IMPLIED>
+<!ELEMENT publicationStmt (p)*>
+<!ELEMENT sourceDesc (bibl)>
+<!ELEMENT bibl (title?, biblScope?, pubPlace?, publisher?, date?, idno*, repository?, idno*)+>
+<!ELEMENT biblScope (#PCDATA) >
+<!ATTLIST biblScope 
+   type CDATA #IMPLIED>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT bookseller (#PCDATA) >
+<!ELEMENT pubPlace (#PCDATA) >
+<!ELEMENT format (#PCDATA) >
+<!ELEMENT repository (#PCDATA)>
+<!ELEMENT revisionDesc (change+)>
+<!ELEMENT change (date, respStmt, item)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT respStmt (name)>
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT item (#PCDATA | desc | label)* >
+<!ELEMENT profileDesc (textClass)>
+<!ELEMENT textClass (classCode)+>
+<!ELEMENT classCode (#PCDATA)>
+<!ATTLIST classCode 
+    scheme (Teerink | ESTC | CWJS) #IMPLIED>
+
+<!-- text -->
+<!ELEMENT text (body)>
+<!ELEMENT body (%pBottom; | %page;  | %figures; | %titles; | p | q | signature | trailer | titlePage | ht | list | r | lb)+>
+
+<!-- milestones  -->
+<!ELEMENT pb EMPTY>
+<!ELEMENT pn (#PCDATA)>
+<!ATTLIST pn 
+    type (TS | ESTC | shelf) #IMPLIED
+    id CDATA #IMPLIED>
+<!ELEMENT lb EMPTY>
+
+<!-- figures  -->
+<!ELEMENT f (title)?>
+<!ATTLIST f 
+    type (illustration | map |frontispiece) "illustration"
+    desc CDATA #IMPLIED>
+
+<!ELEMENT ornament EMPTY >
+<!ATTLIST ornament 
+    position (header | trailer | titlePage) #REQUIRED
+    printer CDATA #IMPLIED>
+
+<!-- titlePage  -->
+<!ELEMENT titlePage (t|r|docImprint|tPart|byLine|epigraph|ornament|f | lb| issue)+>
+<!ATTLIST titlePage 
+rend CDATA #IMPLIED>
+<!ELEMENT r   EMPTY>
+<!ELEMENT docImprint (#PCDATA |%rend; | %figures; | font | lb)*>
+<!ELEMENT tPart (#PCDATA |%rend; | %figures; | font | lb | cols)*>
+<!ELEMENT byLine (#PCDATA |%rend; | %figures; | font | lb)* >
+<!ELEMENT epigraph (#PCDATA |%rend; | %figures; | font | lb)*>
+<!ELEMENT issue (#PCDATA |%rend; | %figures; | font | lb)*>
+<!ELEMENT col (#PCDATA |%rend; | %figures; | font | lb)*>
+<!ELEMENT cols (col, col)>
+<!ATTLIST col 
+    rend CDATA #IMPLIED
+    n (1|2) #REQUIRED>
+<!ELEMENT font (#PCDATA |%rend; |%figures; | lb | hh)*>
+<!ATTLIST font 
+    dim (small|big) #IMPLIED
+    type (roman|black) "roman">
+
+<!-- TOC pages -->
+<!ELEMENT list ((%titles;)*, (item+ | list*))>
+<!ATTLIST list 
+type CDATA #IMPLIED>
+<!ELEMENT desc (#PCDATA | dc | %pBottom; | %page; |%figures; | ht | hh | q | %notes; | %rend;)*>
+<!ELEMENT label (#PCDATA | %rend;)* >
+<!ATTLIST label level (%titles;) #IMPLIED>
+
+
+
+<!-- pBottom -->
+<!ELEMENT s (#PCDATA | %rend;)*>
+<!ELEMENT c (#PCDATA | %rend; )*>
+<!ELEMENT pf (#PCDATA | %rend;)* > 
+
+<!-- titles and headings -->
+<!ELEMENT h (#PCDATA | %rend; | %notes; | lb)*>
+<!ELEMENT t (#PCDATA |%rend;| %figures; | font | lb |r | hh)*>
+<!ELEMENT sub (#PCDATA |%rend;)*>
+<!ELEMENT argument (#PCDATA |%rend;)*>
+
+<!-- font features -->
+<!ELEMENT i (#PCDATA | lb | hh | %rend;)* >
+<!ELEMENT sc (#PCDATA | lb | hh | %rend;)*>
+<!ELEMENT dc (#PCDATA | %rend;)*>
+<!ELEMENT sup (#PCDATA | %rend;)* >
+<!ELEMENT fc (#PCDATA)*>
+
+<!-- notes -->
+
+<!ELEMENT fn (#PCDATA |%rend;| %figures; | font | lb |r | hh | q)* >
+<!ELEMENT sn (#PCDATA |%rend;| %figures; | font | lb |r | hh | q)* >
+
+<!-- para and specialPara -->
+<!ELEMENT p (#PCDATA | dc | %pBottom; | %page; |%figures; | ht | hh | q | %notes; | %rend; | lb)*>
+<!ELEMENT q (#PCDATA |%rend; | %pBottom; | %page; | dc | lb)* >
+<!ELEMENT signature (#PCDATA |%rend;)* >
+<!ELEMENT trailer (#PCDATA | %rend;)*>
+
+<!-- inLine elements -->
+
+<!-- gaps -->
+<!ELEMENT ht EMPTY >
+<!ATTLIST ht 
+     a CDATA #REQUIRED
+     l CDATA #REQUIRED   >
+
+<!--hard-hyphen -->
+<!ELEMENT hh (#PCDATA)>
+
+
+<!-- Character entities-->
+<!ENTITY oelig "&#x153;" >
+<!ENTITY aelig "&#xe6;">
+<!ENTITY AElig "&#xc6;" >
+<!ENTITY mdash "&#x2014;" >

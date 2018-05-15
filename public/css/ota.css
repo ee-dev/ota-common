@@ -1,0 +1,193 @@
+div.teiHeader{
+    border:solid blue 1pt;
+    padding:6pt;
+    margin:3%;
+}
+table.header tr td.data{
+    font-weight:normal;
+}
+table.header tr td.label{
+    font-weight:bold;
+    background:silver;
+}
+td.label{
+    vertical-align:top;
+}
+table.catalogue tr td{
+    vertical-align:top;
+}
+table.sortable thead{
+    background-color:#eee;
+    color:blue;
+    text-decoration:underline;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.rss{
+    margin-top:2em;
+}
+.rsstitle a{
+    display:block;
+    font-size:120%;
+    text-decoration:none;
+}
+.rssdate{
+    display:block;
+    text-align:right;
+    font-size:70%;
+    font-weight:bold;
+}
+.rssdescription{
+    margin-left:3em;
+    margin-right:3em;
+}
+
+.main-content{
+    margin-left:2%;
+    margin-right:2%;
+    clear:both;
+}
+
+p{
+    margin-left:2%;
+    margin-right:2%;
+}
+div.orderForm{
+    margin:1%;
+    font-size:80%;
+}
+.tiny{
+    font-size:70%;
+}
+
+.OTAnav li{
+    display:inline;
+    text-decoration:none;
+    text-align:left;
+}
+
+ul.OTAnav{
+    color:#000066;
+    margin-top:0pt;
+    text-align:left;
+}
+
+
+.OTAnav li a{
+    display:inline;
+    color:#000066;
+}
+
+
+
+div#mainMenu
+{
+    text-align:left;
+    background-color:#eeefff;
+    border-bottom-width:1px;
+    border-top-width:0px;
+    border-bottom-style:solid;
+    border-bottom-color:#000000;
+    color:#000000;
+    margin-top:0px;
+    margin-right:0px;
+    margin-bottom:0px;
+    margin-left:0px;
+    padding-top:0px;
+    padding-right:0px;
+    padding-bottom:0px;
+    padding-left:0px;
+}
+
+
+.OTAgobutton{
+    color:black;
+}
+
+
+.navLabel{
+    font-weight:normal;
+    font-size:1em;
+}
+.navLink{
+    font-weight:bold;
+    font-size:0.8em;
+}
+.bold{
+    font-weight:bold;
+}
+
+.hideItems li{
+    display:inline;
+}
+
+/** JC - Godwin stuff **/
+
+div.ab{
+    display:block;
+}
+div.ab span{
+    display:inline;
+}
+
+table.box{
+    width:95%;
+}
+table.box td{
+    padding:1px;
+    border:thin solid black;
+}
+table.tablesorter td{
+    padding:1px;
+    border:thin solid black;
+}
+table.tablesorter th{
+    font-weight:bold;
+}
+p.bibl{
+    margin-bottom:12pt;
+}
+p.note{
+    margin-bottom:12pt;
+}
+
+span.pagebreak{
+    float:right;
+    display:block;
+    background-color:#C0C0C0;
+    font-size:smaller;
+}
+
+div.stage,
+span.stage{
+    text-align:center;
+    font-size:smaller;
+    font-style:italic;
+}
+/* speeches in drama */
+div.p-in-sp{
+    margin-left:1em;
+}
+div.sp,
+div.spProse{
+    margin-top:4pt;
+}
+div.spProseFirstFolio{
+    margin-top:3pt;
+    text-indent:1em;
+}
+div.spProse{
+    text-indent:-1em;
+    margin-left:1em;
+}
+div.speaker{
+    font-weight:bold;
+}
+span.speaker{
+    font-style:italic;
+}
+span.it,
+div.it{
+    font-style:italic;
+}
